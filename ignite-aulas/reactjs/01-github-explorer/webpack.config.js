@@ -1,6 +1,5 @@
 const path = require('path') //função que configura as pastas em qualquer 
                             //sistema 
-
 const HtmlWebpackPlugin = require('html-webpack-plugin') 
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
@@ -9,14 +8,13 @@ module.exports = {
 
     mode: isDevelopment ? 'development' : 'production',
     devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-    
-    entry: path.resolve(__dirname,'src', 'index.jsx'), //arquivo de entrada
+    entry: path.resolve(__dirname,'src', 'index.tsx'), //arquivo de entrada
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'bundle.js' //arquivo de saida, ja convertido pelo babel
     },
     resolve:{
-        extensions:['.js', '.jsx'], //extensões que serão aceitas
+        extensions:['.js', '.jsx', 'ts', 'tsx'], //extensões que serão aceitas
     },
     devServer: {
         static: path.resolve(__dirname,'public'),
@@ -31,7 +29,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx$/,
+                test: /\.(j|t)sx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
