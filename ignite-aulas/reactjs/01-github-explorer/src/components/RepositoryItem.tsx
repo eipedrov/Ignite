@@ -1,4 +1,4 @@
-interface RepositoryItemProps {
+interface RepositoryItemProps { //tipagem dos elementos a serem usados
     repository: {
         name: string;
         description: string;
@@ -6,8 +6,7 @@ interface RepositoryItemProps {
     }
 }
 
-
-export function RepositoryItem(props: RepositoryItemProps) {
+export function RepositoryItem(props:RepositoryItemProps) {
     return(
         <li>
             <strong>{props.repository.name}</strong>

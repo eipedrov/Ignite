@@ -14,7 +14,7 @@ module.exports = {
         filename: 'bundle.js' //arquivo de saida, ja convertido pelo babel
     },
     resolve:{
-        extensions:['.js', '.jsx', 'ts', 'tsx'], //extensões que serão aceitas
+        extensions:['.js', '.jsx', '.ts', '.tsx'], //extensões que serão aceitas
     },
     devServer: {
         static: path.resolve(__dirname,'public'),
