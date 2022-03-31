@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
         --text-body: #969cb3;
 
         --shape: #ffffff;
-
     }
 
     *{
